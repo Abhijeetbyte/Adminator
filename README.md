@@ -1,7 +1,7 @@
 <p align="center">
     <h1 align="center">ClipSwipe</h1>
     <h4 align="center">
-      "Automatically navigate YouTube videos using keyboard shortcuts in order to Skip Adds"
+      "Automatically navigate YouTube videos using keyboard shortcuts in order to Skip Ads"
     </h4>
   <br>
 </p>
@@ -25,7 +25,7 @@
 The purpose of this "ClipSwipe" ad blocker is to improve the user's watching experience by removing intrusive or unwanted advertisements. It does not involve redirecting ads to different servers or altering the ad delivery process.
 
 
-## Getting started
+## Getting started 🔥
 
 <b>Prerequisites</b>:
 
@@ -39,6 +39,7 @@ The purpose of this "ClipSwipe" ad blocker is to improve the user's watching exp
 
 * Toggle the "Developer mode" switch located at the top-right corner of the Extensions page.
   - ![Dev-mode](img/dev.png)
+ <br/>
 
 * Click on the "Load unpacked" button that appears after enabling Developer mode.
 
