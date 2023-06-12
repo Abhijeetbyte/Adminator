@@ -1,15 +1,23 @@
-// Listen for messages from the background script
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (request.action === "videoStarted") {
-    // Automatically trigger keyboard shortcuts
-    simulateKeyboardShortcut("Alt+Left");
-    simulateKeyboardShortcut("Alt+Right");
-  }
+// content.js
+
+// Create a MutationObserver to watch for changes in the player container
+const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+        if (
+            mutation.attributeName === 'aria-label' &&
+            mutation.target.getAttribute('aria-label').startsWith('Play')
+        ) {
+            //console.log('Video started playing');
+            chrome.runtime.sendMessage({ action: 'videoStarted' });
+        }
+    });
 });
 
-// Simulate a keyboard shortcut
-function simulateKeyboardShortcut(shortcut) {
-  chrome.tabs.executeScript({
-    code: `document.dispatchEvent(new KeyboardEvent('keydown', { key: '${shortcut}', code: '${shortcut}', altKey: true }));`
-  });
-}
+// Find the player container element
+const playerContainer = document.getElementById('player-container');
+
+// Start observing mutations in the player container
+observer.observe(playerContainer, { attributes: true });
+
+// Log a message when the content script is loaded
+//console.log('Content script loaded');
