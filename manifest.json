@@ -1,18 +1,24 @@
 {
     "manifest_version": 3,
-    "name": "ClipSwipe",
+    "name": "Adminator",
     "version": "1.0",
-    "description": "Automatically navigate YouTube videos using keyboard shortcuts in order to Skip Adds.",
-    "permissions": ["activeTab"],
+    "description": "Automatically navigate youtube page while watching videos in order to skip ads",
+    "permissions": ["activeTab", "history"],
     "action": {
-      "default_popup": "popup.html"
+      "default_popup": "popup.html",
+      "default_icon": {
+    
+      }
     },
     "background": {
       "service_worker": "background.js"
     },
+    "icons": {
+      
+    },
     "content_scripts": [
       {
-        "matches": ["https://www.youtube.com/*"],
+        "matches": ["*://www.youtube.com/watch?v=*"],
         "js": ["content.js"]
       }
     ]
