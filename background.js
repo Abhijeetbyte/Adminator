@@ -1,26 +1,16 @@
-// background.js
-
-// Log a message when the extension is installed or updated
-chrome.runtime.onInstalled.addListener(details => {
-    //console.log('Extension installed or updated:', details.reason);
-});
-
-// Add a listener for the extension icon click event
-chrome.action.onClicked.addListener(tab => {
-    //console.log('Extension icon clicked');
-    chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        function: simulateKeyCombination,
-    });
-});
-
-// Simulate the key combination
-function simulateKeyCombination() {
-    //console.log('Simulating key combination');
-    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Alt' }));
-    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowLeft' }));
-    document.dispatchEvent(new KeyboardEvent('keyup', { key: 'ArrowLeft' }));
-    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight' }));
-    document.dispatchEvent(new KeyboardEvent('keyup', { key: 'ArrowRight' }));
-    document.dispatchEvent(new KeyboardEvent('keyup', { key: 'Alt' }));
-}
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    if (request.action === "navigate") {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        if (tabs && tabs[0]) {
+          const tab = tabs[0];
+          // Navigate back and forward
+          chrome.tabs.update(tab.id, { url: 'about:blank' }, () => {
+            setTimeout(() => {
+              chrome.tabs.update(tab.id, { url: tab.url });
+            }, 500);
+          });
+        }
+      });
+    }
+  });
+  
