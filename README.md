@@ -1,7 +1,7 @@
 <p align="center">
-    <h1 align="center">ClipSwipe</h1>
+    <h1 align="center">Adminator</h1>
     <h4 align="center">
-      "Automatically navigate YouTube videos using keyboard shortcuts in order to Skip Ads"
+      "Automatically navigate youtube page while watching videos in order to skip ads"
     </h4>
   <br>
 </p>
@@ -22,7 +22,7 @@
 <br/>
 
 
-The purpose of this "ClipSwipe" ad blocker is to improve the user's watching experience by removing intrusive or unwanted advertisements. It does not involve redirecting ads to different servers or altering the ad delivery process.
+The purpose of this "Adminator" ad blocker is to improve the user's watching experience by removing intrusive or unwanted advertisements. It does not involve redirecting ads to different servers or altering the ad delivery process.
 
 
 ## Getting started 🔥
@@ -31,11 +31,11 @@ The purpose of this "ClipSwipe" ad blocker is to improve the user's watching exp
 
 * Your computer must be running on Chrome Version 114.0.5735.110 or newer
   
-* Get the Latest Version of the [Extension](https://github.com/Abhijeetbyte/ClipSwipe/archive/refs/heads/main.zip)
+* Get the Latest Version of the [Extension]([https://github.com/Abhijeetbyte/ClipSwipe/archive/refs/heads/main.zip](https://github.com/Abhijeetbyte/Adminator/archive/refs/tags/v2.0.zip))
 
-* Extract the zip and delete unnecessary files, except `background.js` , `content.js`, `manifest.json` and `popup.html`  </br>
+* Extract the zip and delete unnecessary files, except `manifest.json`, `background.js`, `content.js`, `popup.html` and `popup.js`  </br>
 
-* Open Google Chrome, in the address bar, enter "chrome://extensions" to open the Extensions page.
+* Open Google Chrome, in the address bar, enter ```chrome://extensions``` to open the Extensions page.
 
 * Toggle the "Developer mode" switch located at the top-right corner of the Extensions page.
   - ![Dev-mode](img/dev.png)
@@ -46,7 +46,7 @@ The purpose of this "ClipSwipe" ad blocker is to improve the user's watching exp
 * In the file explorer window that appears, navigate to the location where you saved the "ClipSwipe" folder, select it, and click "Open". 
 <br>
 
-Chrome will automatically load and install your extension from the zip file. You should see the "ClipSwipe" extension appear in the list of installed extensions on the Extensions page. <br/>
+Chrome will automatically load and install your extension from the zip file. You should see the "Adminator" extension appear in the list of installed extensions on the Extensions page, pin it at the top, and click on the `icon` whenever you want to skip an ad. <br/>
 
 
 
