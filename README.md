@@ -31,7 +31,7 @@ The purpose of this "Adminator" ad blocker is to improve the user's watching exp
 
 * Your computer must be running on Chrome Version 114.0.5735.110 or newer
   
-* Get the Latest Version of the [Extension](https://github.com/Abhijeetbyte/Adminator/archive/refs/tags/v2.0.zip))
+* Get the Latest Version of the [Extension](https://github.com/Abhijeetbyte/Adminator/archive/refs/tags/v2.0.zip)
 
 * Extract the zip and delete unnecessary files, except `manifest.json`, `background.js`, `content.js`, `popup.html` and `popup.js`  </br>
 
