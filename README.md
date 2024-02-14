@@ -57,6 +57,6 @@ Feel free to report <b>[issues](https://github.com/Abhijeetbyte/ClipSwipe/issues
 
 ## License
 
-Copyright © 2022 Abhijeet kumar. All rights reserved.
+Copyright © 2023 Abhijeet kumar. All rights reserved.
 
 Licensed under the [CC0-1.0 License](LICENSE).
